@@ -1,13 +1,12 @@
-import io.qameta.allure.Step;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
-import pageObject.LoginPage;
-import pageObject.MainPage;
-import pageObject.RegisterPage;
+import site.nomoreparties.stellarburger.pom.LoginPage;
+import site.nomoreparties.stellarburger.pom.RegisterPage;
 import rules.BrowserRule;
 
 import java.util.Random;
@@ -34,7 +33,7 @@ public class RegistrationTest {
     }
 
     @Test
-    @Step("Зарегистрировать пользователя с валидными данными")
+    @DisplayName("Зарегистрировать пользователя с валидными данными")
     public void validRegistrationTest() throws InterruptedException {
 
         webDriver = browserRule.getWebDriver(browserType);
@@ -55,7 +54,7 @@ public class RegistrationTest {
     }
 
     @Test
-    @Step("Неуспешно зарегистрировать пользователя с паролем менее 6 символов")
+    @DisplayName("Неуспешно зарегистрировать пользователя с паролем менее 6 символов")
     public void invalidRegistrationWithShortPasswordTest() throws InterruptedException {
 
         webDriver = browserRule.getWebDriver(browserType);
@@ -73,15 +72,4 @@ public class RegistrationTest {
 
         Assert.assertTrue("Валидация на длину пароля не работает", registerPage.getIncorrectPassword().contains("Некорректный пароль"));
     }
-
-
-
-
-
-
-
-
-
-
-
 }

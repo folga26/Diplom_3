@@ -1,13 +1,16 @@
-import io.qameta.allure.Step;
+import api.client.UserClient;
+import io.qameta.allure.junit4.DisplayName;
+import io.restassured.response.Response;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
-import pageObject.LoginPage;
-import pageObject.MainPage;
-import pageObject.PersonalAccountPage;
+import site.nomoreparties.stellarburger.pom.LoginPage;
+import site.nomoreparties.stellarburger.pom.MainPage;
+import site.nomoreparties.stellarburger.pom.PersonalAccountPage;
 import rules.BrowserRule;
 
 import java.util.Random;
@@ -18,14 +21,23 @@ import static io.restassured.RestAssured.given;
 public class GoToAndFromPersonalAccountTest {
 
     private final String browserType;
-
     private WebDriver webDriver;
+    private String accessToken;
+    private String email;
+    private String password;
+    private String bodyReg;
 
     @Rule
     public BrowserRule browserRule = new BrowserRule();
 
     public GoToAndFromPersonalAccountTest(String browserType) {
         this.browserType = browserType;
+    }
+
+    @After
+    public void deleteUser() {
+        UserClient userClient = new UserClient();
+        userClient.deleteCreatedUser(this.accessToken);
     }
 
     @Parameterized.Parameters
@@ -37,8 +49,8 @@ public class GoToAndFromPersonalAccountTest {
     }
 
     @Test
-    @Step("Выполнен переход в Личный кабинет с главной страницы и обратно")
-    public void goToAndFromPersonalAccountTest() throws InterruptedException {
+    @DisplayName("Выполнен успешный переход в Личный кабинет с главной страницы")
+    public void goToPersonalAccountTest() throws InterruptedException {
 
         webDriver = browserRule.getWebDriver(browserType);
 
@@ -46,54 +58,87 @@ public class GoToAndFromPersonalAccountTest {
         LoginPage loginPage = new LoginPage(webDriver);
         PersonalAccountPage personalAccountPage = new PersonalAccountPage(webDriver);
 
+        UserClient userClient = new UserClient();
         Random random = new Random();
-        String email = "something" + random.nextInt(10000000) + "@yandex.ru";
-        String json = "{\"email\": \"" + email + "\", \"password\": \"123456\", \"name\": \"Legolas\" }";
-
-
-        String accessToken = given()
-                .header("Content-type", "application/json")
-                .body(json)
-                .post("https://stellarburgers.nomoreparties.site/api/auth/register")
-                .then().extract().path("accessToken").toString();
+        this.email = "something" + random.nextInt(10000000) + "@yandex.ru";
+        this.password = "abc" + random.nextInt(10000000);
+        this.bodyReg = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\", \"name\": \"Legolas\" }";
+        Response userRegistrationResponse = userClient.newUserRegistration(bodyReg);
+        this.accessToken = userRegistrationResponse.then().extract().path("accessToken").toString();
 
         mainPage.open()
                 .clickPersonalAccountButton();
-
-        loginPage.open()
+        loginPage
                 .inputEmailLoginInput(email)
-                .inputPasswordLoginInput("123456")
+                .inputPasswordLoginInput(password)
                 .clickLoginButton();
-
-        Assert.assertTrue("Вход не выполнен", mainPage.getMakeOrderButtonText().contains("Оформить заказ"));
-
-        mainPage.open()
+        mainPage
                 .clickPersonalAccountButton();
 
         Assert.assertTrue("Переход в Личный кабинет не выполнен", personalAccountPage.getLogoutButtonText().contains("Выход"));
+    }
 
-        personalAccountPage.open()
-                .clickStellarBurgersFromPersonalAccountButton();
+    @Test
+    @DisplayName("Выполнен успешный переход из личного кабинета по кнопке Конструктор")
+    public void goToConstructorFromPersonalAccountTest() throws InterruptedException {
 
-        Assert.assertTrue("Переход не выполнен", mainPage.getMakeOrderButtonText().contains("Оформить заказ"));
+        webDriver = browserRule.getWebDriver(browserType);
+
+        MainPage mainPage = new MainPage(webDriver);
+        LoginPage loginPage = new LoginPage(webDriver);
+        PersonalAccountPage personalAccountPage = new PersonalAccountPage(webDriver);
+
+        UserClient userClient = new UserClient();
+        Random random = new Random();
+        this.email = "something" + random.nextInt(10000000) + "@yandex.ru";
+        this.password = "abc" + random.nextInt(10000000);
+        this.bodyReg = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\", \"name\": \"Legolas\" }";
+        Response userRegistrationResponse = userClient.newUserRegistration(bodyReg);
+        this.accessToken = userRegistrationResponse.then().extract().path("accessToken").toString();
 
         mainPage.open()
                 .clickPersonalAccountButton();
-
-        Assert.assertTrue("Переход в Личный кабинет не выполнен", personalAccountPage.getLogoutButtonText().contains("Выход"));
-
+        loginPage
+                .inputEmailLoginInput(email)
+                .inputPasswordLoginInput(password)
+                .clickLoginButton();
+        mainPage
+                .clickPersonalAccountButton();
         personalAccountPage.open()
                 .clickConstructorFromPersonalAccountButton();
 
         Assert.assertTrue("Переход не выполнен", mainPage.getMakeOrderButtonText().contains("Оформить заказ"));
+    }
 
-        //удалить тестовые данные после проведения теста
-        given()
-                .header("Authorization", accessToken)
-                .header("Content-type", "application/json")
-                .delete("https://stellarburgers.nomoreparties.site/api/auth/user")
-                .then().statusCode(202);
+    @Test
+    @DisplayName("Выполнен успешный переход из личного кабинета по кнопке Stellar Burgers")
+    public void goToStellarBurgersFromPersonalAccountTest() throws InterruptedException {
 
+        webDriver = browserRule.getWebDriver(browserType);
 
+        MainPage mainPage = new MainPage(webDriver);
+        LoginPage loginPage = new LoginPage(webDriver);
+        PersonalAccountPage personalAccountPage = new PersonalAccountPage(webDriver);
+
+        UserClient userClient = new UserClient();
+        Random random = new Random();
+        this.email = "something" + random.nextInt(10000000) + "@yandex.ru";
+        this.password = "abc" + random.nextInt(10000000);
+        this.bodyReg = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\", \"name\": \"Legolas\" }";
+        Response userRegistrationResponse = userClient.newUserRegistration(bodyReg);
+        this.accessToken = userRegistrationResponse.then().extract().path("accessToken").toString();
+
+        mainPage.open()
+                .clickPersonalAccountButton();
+        loginPage
+                .inputEmailLoginInput(email)
+                .inputPasswordLoginInput(password)
+                .clickLoginButton();
+        mainPage
+                .clickPersonalAccountButton();
+        personalAccountPage.open()
+                .clickStellarBurgersFromPersonalAccountButton();
+
+        Assert.assertTrue("Переход не выполнен", mainPage.getMakeOrderButtonText().contains("Оформить заказ"));
     }
 }

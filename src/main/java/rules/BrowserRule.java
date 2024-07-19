@@ -14,7 +14,6 @@ public class BrowserRule extends ExternalResource {
 
     private WebDriver webDriver;
 
-
     public WebDriver getWebDriver(String browserName) {
         switch (browserName) {
             case "chrome":
@@ -34,10 +33,7 @@ public class BrowserRule extends ExternalResource {
         return webDriver;
     }
 
-
     protected void after() {
         webDriver.quit();
     }
-
-
 }

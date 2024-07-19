@@ -1,5 +1,6 @@
-package pageObject;
+package site.nomoreparties.stellarburger.pom;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -26,63 +27,70 @@ public class MainPage {
         this.webDriver = webDriver;
     }
 
+    @Step("Открыть главную страницу")
     public MainPage open() {
         webDriver.get(URL);
         return this;
     }
 
-    public MainPage click(By element) {
-        webDriver.findElement(element).click();
-        return this;
-    }
-
+    @Step("Нажать на кнопку StellarBurgers")
     public MainPage clickStellarBurgersButton() {
         webDriver.findElement(stellarBurgersButton).click();
         return this;
     }
 
+    @Step("Нажать на кнопку Конструктор")
     public MainPage clickConstructorButton() {
         webDriver.findElement(constructorButton).click();
         return this;
     }
 
+    @Step("Нажать на кнопку Личный кабинет")
     public MainPage clickPersonalAccountButton() {
         webDriver.findElement(personalAccountButton).click();
         return this;
     }
 
+    @Step("Нажать на кнопку Войти в личный кабинет")
     public MainPage clickLoginToPersonalAccountButton() {
         webDriver.findElement(loginToPersonalAccountButton).click();
         return this;
     }
 
+    @Step("Найти кнопку Оформить заказ")
     public String getMakeOrderButtonText() {
         return webDriver.findElement(makeOrderButton).getText();
     }
 
+    @Step("Нажать на таб Булки")
     public MainPage clickBunTab() {
         webDriver.findElement(bunTab).click();
         return this;
     }
 
+    @Step("Нажать на таб Соусы")
     public MainPage clickSauceTab() {
         webDriver.findElement(sauceTab).click();
         return this;
     }
 
+    @Step("Нажать на таб Начинки")
     public MainPage clickFillingTab() {
         webDriver.findElement(fillingTab).click();
         return this;
     }
 
+    @Step("Найти заголовок Булки")
     public String getBunText() {
         return webDriver.findElement(bunText).getText();
     }
 
+    @Step("Найти заголовок Соусы")
     public String getSauceText() {
         return webDriver.findElement(sauceText).getText();
     }
 
+    @Step("Найти заголовок Начинки")
     public String getFillingText() {
         return webDriver.findElement(fillingText).getText();
     }

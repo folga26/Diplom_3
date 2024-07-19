@@ -1,83 +1,83 @@
 From: <Saved by Blink>
-Snapshot-Content-Location: http://192.168.1.70:53607/index.html
+Snapshot-Content-Location: http://192.168.1.70:28265/index.html#
 Subject: Allure Report
-Date: Tue, 16 Jul 2024 21:23:51 +0300
+Date: Sat, 20 Jul 2024 01:11:12 +0300
 MIME-Version: 1.0
 Content-Type: multipart/related;
 	type="text/html";
-	boundary="----MultipartBoundary--4f6iUQSVctNZGXPTSwA2KXGDSrsAMHMzMBYLxPLoqC----"
+	boundary="----MultipartBoundary--zmrrqMHvKLfBprapmnMXkfZMW8Ih1KUSFRAJeEgTmz----"
 
 
-------MultipartBoundary--4f6iUQSVctNZGXPTSwA2KXGDSrsAMHMzMBYLxPLoqC----
+------MultipartBoundary--zmrrqMHvKLfBprapmnMXkfZMW8Ih1KUSFRAJeEgTmz----
 Content-Type: text/html
-Content-ID: <frame-55CE7E9C8F903CF283033E4710AC031A@mhtml.blink>
+Content-ID: <frame-F53F125D7CC5B56230DC4947F6B7FF71@mhtml.blink>
 Content-Transfer-Encoding: quoted-printable
-Content-Location: http://192.168.1.70:53607/index.html
+Content-Location: http://192.168.1.70:28265/index.html#
 
 <!DOCTYPE html><html dir=3D"ltr"><head><meta http-equiv=3D"Content-Type" co=
 ntent=3D"text/html; charset=3DUTF-8">
    =20
     <title>Allure Report</title>
-    <link rel=3D"favicon" href=3D"http://192.168.1.70:53607/favicon.ico?v=
+    <link rel=3D"favicon" href=3D"http://192.168.1.70:28265/favicon.ico?v=
 =3D2">
     <link rel=3D"stylesheet" type=3D"text/css" href=3D"http://192.168.1.70:=
-53607/styles.css">
-        <link rel=3D"stylesheet" href=3D"http://192.168.1.70:53607/plugins/=
+28265/styles.css">
+        <link rel=3D"stylesheet" href=3D"http://192.168.1.70:28265/plugins/=
 screen-diff/styles.css">
 </head>
 <body>
 <div id=3D"alert"></div>
 <div id=3D"content"><div class=3D"app"><div class=3D"app__nav"><div class=
 =3D"side-nav"><div class=3D"side-nav__head">
-    <a href=3D"http://192.168.1.70:53607/" class=3D"side-nav__brand">
+    <a href=3D"http://192.168.1.70:28265/" class=3D"side-nav__brand">
         <span class=3D"side-nav__brand-text">Allure</span>
     </a>
 </div>
 <ul class=3D"side-nav__menu">
         <li class=3D"side-nav__item" data-tooltip=3D"Overview">
-            <a href=3D"http://192.168.1.70:53607/index.html#" class=3D"side=
+            <a href=3D"http://192.168.1.70:28265/index.html#" class=3D"side=
 -nav__link side-nav__link_active">
                 <span class=3D"side-nav__icon fa fa-home"></span>
                 <div class=3D"side-nav__text">Overview</div>
             </a>
         </li>
         <li class=3D"side-nav__item" data-tooltip=3D"Categories">
-            <a href=3D"http://192.168.1.70:53607/index.html#categories" cla=
+            <a href=3D"http://192.168.1.70:28265/index.html#categories" cla=
 ss=3D"side-nav__link">
                 <span class=3D"side-nav__icon fa fa-flag"></span>
                 <div class=3D"side-nav__text">Categories</div>
             </a>
         </li>
         <li class=3D"side-nav__item" data-tooltip=3D"Suites">
-            <a href=3D"http://192.168.1.70:53607/index.html#suites" class=
+            <a href=3D"http://192.168.1.70:28265/index.html#suites" class=
 =3D"side-nav__link">
                 <span class=3D"side-nav__icon fa fa-briefcase"></span>
                 <div class=3D"side-nav__text">Suites</div>
             </a>
         </li>
         <li class=3D"side-nav__item" data-tooltip=3D"Graphs">
-            <a href=3D"http://192.168.1.70:53607/index.html#graph" class=3D=
+            <a href=3D"http://192.168.1.70:28265/index.html#graph" class=3D=
 "side-nav__link">
                 <span class=3D"side-nav__icon fa fa-bar-chart"></span>
                 <div class=3D"side-nav__text">Graphs</div>
             </a>
         </li>
         <li class=3D"side-nav__item" data-tooltip=3D"Timeline">
-            <a href=3D"http://192.168.1.70:53607/index.html#timeline" class=
+            <a href=3D"http://192.168.1.70:28265/index.html#timeline" class=
 =3D"side-nav__link">
                 <span class=3D"side-nav__icon fa fa-clock-o"></span>
                 <div class=3D"side-nav__text">Timeline</div>
             </a>
         </li>
         <li class=3D"side-nav__item" data-tooltip=3D"Behaviors">
-            <a href=3D"http://192.168.1.70:53607/index.html#behaviors" clas=
+            <a href=3D"http://192.168.1.70:28265/index.html#behaviors" clas=
 s=3D"side-nav__link">
                 <span class=3D"side-nav__icon fa fa-list"></span>
                 <div class=3D"side-nav__text">Behaviors</div>
             </a>
         </li>
         <li class=3D"side-nav__item" data-tooltip=3D"Packages">
-            <a href=3D"http://192.168.1.70:53607/index.html#packages" class=
+            <a href=3D"http://192.168.1.70:28265/index.html#packages" class=
 =3D"side-nav__link">
                 <span class=3D"side-nav__icon fa fa-align-left"></span>
                 <div class=3D"side-nav__text">Packages</div>
@@ -109,13 +109,13 @@ ts-grid__col"><div class=3D"widget island" data-id=3D"summary">
     <div class=3D"widget__body"><div><div class=3D"widget__flex-line">
     <div class=3D"widget__column">
         <h2 class=3D"widget__title">
-                Allure Report 7/16/2024
+                Allure Report 7/20/2024
             <div class=3D"widget__subtitle">
-                21:20:05 - 21:22:30 (2m 24s)
+                1:06:51 - 1:09:00 (2m 08s)
             </div>
         </h2>
         <div class=3D"summary-widget__stats splash">
-            <div class=3D"splash__title">20</div>
+            <div class=3D"splash__title">24</div>
             <div class=3D"splash__subtitle">test cases</div>
         </div>
     </div>
@@ -148,7 +148,7 @@ d=3D"M-1.4695761589768237e-14,-80L-1.175660927181459e-14,-64Z"></path><text=
     <span class=3D"widget__subtitle">4 items total</span>
 </h2>
 <div class=3D"table table_hover widget__table">
-        <a class=3D"table__row" href=3D"http://192.168.1.70:53607/index.htm=
+        <a class=3D"table__row" href=3D"http://192.168.1.70:28265/index.htm=
 l#suites/b9a196f305ae86bf6bf452c18364a114">
             <div class=3D"table__col">LoginTest</div>
             <div class=3D"table__col">
@@ -156,7 +156,7 @@ l#suites/b9a196f305ae86bf6bf452c18364a114">
 _passed" style=3D"flex-grow: 8">8</div></div>
             </div>
         </a>
-        <a class=3D"table__row" href=3D"http://192.168.1.70:53607/index.htm=
+        <a class=3D"table__row" href=3D"http://192.168.1.70:28265/index.htm=
 l#suites/dff0921a1606ca5407799e0b2f49c3ad">
             <div class=3D"table__col">ConstructorTest</div>
             <div class=3D"table__col">
@@ -164,7 +164,15 @@ l#suites/dff0921a1606ca5407799e0b2f49c3ad">
 _passed" style=3D"flex-grow: 6">6</div></div>
             </div>
         </a>
-        <a class=3D"table__row" href=3D"http://192.168.1.70:53607/index.htm=
+        <a class=3D"table__row" href=3D"http://192.168.1.70:28265/index.htm=
+l#suites/7d0ece3fb55964ca7b710a8a99a13942">
+            <div class=3D"table__col">GoToAndFromPersonalAccountTest</div>
+            <div class=3D"table__col">
+                <div class=3D"bar"><div class=3D"bar__fill bar__fill_status=
+_passed" style=3D"flex-grow: 6">6</div></div>
+            </div>
+        </a>
+        <a class=3D"table__row" href=3D"http://192.168.1.70:28265/index.htm=
 l#suites/69284e8223e4673c9952b238191a3c05">
             <div class=3D"table__col">RegistrationTest</div>
             <div class=3D"table__col">
@@ -172,15 +180,7 @@ l#suites/69284e8223e4673c9952b238191a3c05">
 _passed" style=3D"flex-grow: 4">4</div></div>
             </div>
         </a>
-        <a class=3D"table__row" href=3D"http://192.168.1.70:53607/index.htm=
-l#suites/7d0ece3fb55964ca7b710a8a99a13942">
-            <div class=3D"table__col">GoToAndFromPersonalAccountTest</div>
-            <div class=3D"table__col">
-                <div class=3D"bar"><div class=3D"bar__fill bar__fill_status=
-_passed" style=3D"flex-grow: 2">2</div></div>
-            </div>
-        </a>
-        <a class=3D"table__row" href=3D"http://192.168.1.70:53607/index.htm=
+        <a class=3D"table__row" href=3D"http://192.168.1.70:28265/index.htm=
 l#suites">
             <div class=3D"table__col table__col_center">
                 Show all
@@ -203,10 +203,10 @@ l#suites">
     </div>
     <div class=3D"widget__body"><div><h2 class=3D"widget__title">
     Features by stories
-    <span class=3D"widget__subtitle">20 items total</span>
+    <span class=3D"widget__subtitle">24 items total</span>
 </h2>
 <div class=3D"table table_hover widget__table">
-        <a class=3D"table__row" href=3D"http://192.168.1.70:53607/index.htm=
+        <a class=3D"table__row" href=3D"http://192.168.1.70:28265/index.htm=
 l#behaviors">
             <div class=3D"table__col table__col_center">
                 Show all
@@ -235,7 +235,7 @@ re is nothing to show</div></div></div>
     <span class=3D"widget__subtitle">0 items total</span>
 </h2>
 <div class=3D"table table_hover widget__table">
-        <a class=3D"table__row" href=3D"http://192.168.1.70:53607/index.htm=
+        <a class=3D"table__row" href=3D"http://192.168.1.70:28265/index.htm=
 l#categories">
             <div class=3D"table__col table__col_center">
                 Show all
@@ -274,10 +274,10 @@ l#categories">
 
 
 </body></html>
-------MultipartBoundary--4f6iUQSVctNZGXPTSwA2KXGDSrsAMHMzMBYLxPLoqC----
+------MultipartBoundary--zmrrqMHvKLfBprapmnMXkfZMW8Ih1KUSFRAJeEgTmz----
 Content-Type: text/css
 Content-Transfer-Encoding: quoted-printable
-Content-Location: http://192.168.1.70:53607/styles.css
+Content-Location: http://192.168.1.70:28265/styles.css
 
 @charset "utf-8";
 
@@ -9842,10 +9842,10 @@ p: 50%; padding-bottom: 12px; }
 .environment__key { color: rgb(153, 153, 153); }
 
 .testresult-link:not(:last-child)::after { content: ","; }
-------MultipartBoundary--4f6iUQSVctNZGXPTSwA2KXGDSrsAMHMzMBYLxPLoqC----
+------MultipartBoundary--zmrrqMHvKLfBprapmnMXkfZMW8Ih1KUSFRAJeEgTmz----
 Content-Type: text/css
 Content-Transfer-Encoding: quoted-printable
-Content-Location: http://192.168.1.70:53607/plugins/screen-diff/styles.css
+Content-Location: http://192.168.1.70:28265/plugins/screen-diff/styles.css
 
 @charset "utf-8";
 
@@ -9862,4 +9862,4 @@ b(255, 255, 255); position: absolute; overflow: hidden; box-shadow: rgb(170=
 , 170, 170) 2px 0px 1px -1px; }
 
 .screen-diff-error { color: rgb(253, 90, 62); }
-------MultipartBoundary--4f6iUQSVctNZGXPTSwA2KXGDSrsAMHMzMBYLxPLoqC------
+------MultipartBoundary--zmrrqMHvKLfBprapmnMXkfZMW8Ih1KUSFRAJeEgTmz------

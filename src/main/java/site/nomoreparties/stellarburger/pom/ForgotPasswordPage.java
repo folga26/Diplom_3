@@ -1,5 +1,6 @@
-package pageObject;
+package site.nomoreparties.stellarburger.pom;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -19,21 +20,19 @@ public class ForgotPasswordPage {
         this.webDriver = webDriver;
     }
 
+    @Step("Открыть страницу восстановления пароля")
     public ForgotPasswordPage open() {
         webDriver.get(URL);
         return this;
     }
 
-    public ForgotPasswordPage click(By element) {
-        webDriver.findElement(element).click();
-        return this;
-    }
-
+    @Step("Нажать на кнопку Войти")
     public ForgotPasswordPage clickLoginFromForgotPasswordPageButton() {
         webDriver.findElement(loginFromForgotPasswordPageButton).click();
         return this;
     }
 
+    @Step("Найти надпись Восстановление пароля")
     public String getPasswordRecoveryText() {
         return webDriver.findElement(passwordRecoveryTitle).getText();
     }

@@ -1,5 +1,6 @@
-package pageObject;
+package site.nomoreparties.stellarburger.pom;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -16,30 +17,30 @@ public class PersonalAccountPage {
         this.webDriver = webDriver;
     }
 
+    @Step("Открыть Личный кабинет")
     public PersonalAccountPage open() {
         webDriver.get(URL);
         return this;
     }
 
-    public PersonalAccountPage click(By element) {
-        webDriver.findElement(element).click();
-        return this;
-    }
-
+    @Step("Нажать на кнопку Выйти в личном кабинете")
     public PersonalAccountPage clickLogoutButton() {
         webDriver.findElement(logoutButton).click();
         return this;
     }
 
+    @Step("Найти кнопку Выйти в личном кабинете")
     public String getLogoutButtonText() {
         return  webDriver.findElement(logoutButton).getText();
     }
 
+    @Step("Нажать из личного кабинета на кнопку StellarBurgers")
     public PersonalAccountPage clickStellarBurgersFromPersonalAccountButton() {
         webDriver.findElement(stellarBurgersFromPersonalAccountButton).click();
         return this;
     }
 
+    @Step("Нажать из личного кабинета на кнопку Конструктор")
     public PersonalAccountPage clickConstructorFromPersonalAccountButton() {
         webDriver.findElement(constructorFromPersonalAccountButton).click();
         return this;
